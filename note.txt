@@ -1,0 +1,4 @@
+API = Application Programming interface 
+REST = Representational State Transfer
+  Architecture
+    b  
