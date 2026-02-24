@@ -20,15 +20,15 @@ It demonstrates real-world backend architecture including:
           User Signup & Login
 
 JWT-based authentication
-            Password encryption using bcrypt
-            Role-based access control (Admin / User)
+          Password encryption using bcrypt
+          Role-based access control (Admin / User)
 
 🗺 Tour Management
-            Full CRUD operations
-            Advanced filtering & sorting
-            Pagination
-            Route aliasing
-            MongoDB aggregation pipelines
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Full CRUD operations
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Advanced filtering & sorting
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Pagination
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Route aliasing
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            MongoDB aggregation pipelines
 
 🛡 Security Implementation
           Data sanitization
