@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const tourSchema = new mongoose.Schema({
+const  tourSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, 'Tour name is required'],
@@ -13,7 +13,7 @@ const tourSchema = new mongoose.Schema({
   },
   maxGroupSize: {
     type: Number,
-    required: [true, 'A tour must have a group sizse']
+    required: [true, 'A tour must have a group size']
   },
   difficulty: {
     type: String,
@@ -47,7 +47,8 @@ const tourSchema = new mongoose.Schema({
   images: [String],
   createdAt: {
     type: Date,
-    default: Date.now()
+    default: Date.now(),
+    select: false
   },
   startDates: [Date]
   
