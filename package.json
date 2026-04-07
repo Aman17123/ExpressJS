@@ -1,15 +1,17 @@
 {
   "name": "natours",
   "version": "1.0.0",
-  "description": "learnign node express and mongoDb",
+  "description": "learning node express and mongoDb",
   "main": "app.js",
   "scripts": {
     "start": "nodemon server.js",
+    "start:prod": "cross-env NODE_ENV=production node server.js",
     "debug": "ndb server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^10.1.0",
     "dotenv": "^17.3.1",
     "express": "^4.22.1",
     "mongoose": "^5.13.15",

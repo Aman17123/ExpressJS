@@ -8,46 +8,21 @@ const userRouter = require('./routes/userRoutes');
 
 const app = express();
 
-//! 1-Middleware
+// 1. Middleware
 app.use(express.json());
 app.use(morgan('tiny'));
-app.use(express.static(`${__dirname}/public`))
+app.use(express.static(`${__dirname}/public`));
 
-//! 2-Routes
+// 2. Routes
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 
-app.all('*', (req, res) => {
-  res.status(404).json({
-    status: 'fail',
-    message: `Can't find ${req.originalUrl} on this server!`
-  });
-});
-
-
-app.use(morgan('tiny'));
-
-app.use((req, res, next) => { 
+// 3. Handle unknown routes
+app.all('*', (req, res, next) => { 
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 
+// 4. Global error handler
 app.use(globalErrorHandler);
 
-
-//! GET request
-// app.get('/api/v1/tours', getAllTours);
-
-//! POST request
-// app.post('/api/v1/tours', createTour);
-
-//! GET request with id parameter
-// app.get('/api/v1/tours/:id', getTour);
-
-//! PATCH request
-// app.patch('/api/v1/tours/:id', updateTour);
-
-//! DELETE request
-// app.delete('/api/v1/tours/:id', deleteTour );
-
-
-module.exports = app;[]
+module.exports = app;
