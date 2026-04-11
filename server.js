@@ -12,12 +12,13 @@ const dotenv = require('dotenv')
 dotenv.config({ path: './config.env' })
 
 const DB = process.env.DATABASE.replace(
-  '<password>', 
+  '<PASSWORD>', 
   process.env.DATABASE_PASSWORD
 );
 
 mongoose.connect(DB, {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
   useCreateIndex: true,
   useFindAndModify: false,
   }).then(() => console.log('DB connection successful!'));
@@ -36,4 +37,4 @@ process.on('unhandledRejection', err => {
   });
 });
 
-console.log(x);
+  
